@@ -1,0 +1,122 @@
+<htlm>
+    <head>
+        <title>Sample</title>
+    </head>
+    <style>
+    .container1 {
+                position: absolute;
+                display: grid;
+                grid-template-columns:auto auto auto auto auto auto auto auto;
+                background-image: url('img.jpg');
+                background-repeat: no-repeat;
+                padding: 1px;
+                min-height: 40vw;
+                min-width: 99vw;
+                }
+    .container {
+                position: absolute;
+                display: grid;
+                grid-template-columns: auto auto auto auto;
+                background-repeat: no-repeat;
+                padding: 0px;
+                min-height: 5vw;
+                min-width: 10vw;
+                opacity: 1;
+            }
+    
+            .grid-cell {
+                position: relative;
+                background-color: rgba(255, 255, 255, 0.8);
+                opacity: 0; 
+                padding: 30px;
+                font-size: 30px;
+                text-align: center
+                
+            }
+            .button {
+      background-color: #eee; 
+      border: none;
+      color: black;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      margin: 4px 2px;
+      cursor: pointer;
+      opacity: 0;
+    }
+    input[type="submit"]{
+  width: 15%;
+  height: 50px;
+  border: 1px solid;
+  background: #2691d9;
+  border-radius: 25px;
+  font-size: 18px;
+  color: #e9f4fb;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+}
+input[type="submit"]:hover{
+  border-color: #2691d9;
+  transition: .5s;
+}
+    
+    </style>
+    <script>
+        function dis(val)
+            {
+                document.getElementById("pswd").value+=val
+            }
+            function verifyPassword() {
+              var pw = document.getElementById("pswd").value;
+              if (pw=="7PI"){
+                document.getElementById("submit").action = "3rd-Page.html";
+               }
+              else{
+                alert("WRONG PASSWORD")
+              }
+    }
+    </script>
+    <body style="background: linear-gradient(120deg,#2980b9, #8e44ad);">
+    <div class="container1">
+    <input class="grid-cell" type="button" value="0" onclick="dis('0')"/>
+    <input class="grid-cell" type="button" value="1" onclick="dis('1')"/> 
+    <input class="grid-cell" type="button" value="2" onclick="dis('2')"/> 
+    <input class="grid-cell" type="button" value="3" onclick="dis('3')"/>
+    <input class="grid-cell" type="button" value="4" onclick="dis('4')"/> 
+    <input class="grid-cell" type="button" value="5" onclick="dis('5')"/> 
+    <input class="grid-cell" type="button" value="6" onclick="dis('6')"/> 
+    <input class="grid-cell" type="button" value="7" onclick="dis('7')"/> 
+    <input class="grid-cell" type="button" value="8" onclick="dis('8')"/> 
+    <input class="grid-cell" type="button" value="9" onclick="dis('9')"/> 
+    <input class="grid-cell" type="button" value="A" onclick="dis('A')"/> 
+    <input class="grid-cell" type="button" value="B" onclick="dis('B')"/> 
+    <input class="grid-cell" type="button" value="C" onclick="dis('C')"/> 
+    <input class="grid-cell" type="button" value="D" onclick="dis('D')"/> 
+    <input class="grid-cell" type="button" value="E" onclick="dis('E')"/> 
+    <input class="grid-cell" type="button" value="F" onclick="dis('F')"/> 
+    <input class="grid-cell" type="button" value="I" onclick="dis('I')"/> 
+    <input class="grid-cell" type="button" value="J" onclick="dis('J')"/> 
+    <input class="grid-cell" type="button" value="K" onclick="dis('K')"/> 
+    <input class="grid-cell" type="button" value="L" onclick="dis('L')"/>
+    <input class="grid-cell" type="button" value="M" onclick="dis('M')"/> 
+    <input class="grid-cell" type="button" value="N" onclick="dis('N')"/> 
+    <input class="grid-cell" type="button" value="O" onclick="dis('O')"/> 
+    <input class="grid-cell" type="button" value="P" onclick="dis('P')"/>
+    
+    
+    </div> 
+    <div class="container" style = "position:relative; left:80px; bottom:-580px;">
+        <centre>
+        <form id="submit" class="button" onsubmit ="return verifyPassword()">
+        <input type = "password" id = "pswd" value = ""> 
+        <span id = "message" style="color:red"> </span> <br><br>
+        </centre>
+        </div>
+        <div class="input" style = "position:relative; left:600px; top:530px;">
+          <input type = "submit" value = "Submit">
+        </div>
+        </form>
+    </body>
+    </htlm>
